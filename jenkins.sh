@@ -13,3 +13,14 @@ yum install jenkins -y
 #STEP-4: RESTARTING JENKINS (when we download service it will on stopped state)
 systemctl start jenkins.service
 systemctl status jenkins.service
+
+
+Working comments #SAI
+yum install java-21-amazon-corretto -y
+java -version
+sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+yum install jenkins -y
+systemctl status jenkins
+systemctl start jenkins
+systemctl status jenkins
