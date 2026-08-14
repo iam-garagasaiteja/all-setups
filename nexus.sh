@@ -33,3 +33,19 @@ sudo chkconfig nexus on
 sudo systemctl start nexus
 sudo systemctl status nexus
 
+
+NEXUS SETUP COMMANDS : (copy paste these commands one by one)
+yum install java-17-amazon-corretto -y
+
+cd /app
+sudo wget https://download.sonatype.com/nexus/3/nexus-3.95.1-01-linux-x86_64.tar.gz
+#https://download.sonatype.com/nexus/3/nexus-3.95.1-01-linux-x86_64.tar.gz
+#tar -zxvf nexus-3.86.2-01-linux-x86_64.tar.gz
+cd /app
+tar -zxvf nexus-3.95.1-01-linux-x86_64.tar.gz
+useradd nexus
+chown -R nexus:nexus nexus-3.86.2-01-linux sonatype-work
+su - nexus
+cd /app/nexus-3.86.2-01-linux/bin/
+./nexus start
+
